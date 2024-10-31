@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+@font-face {
+  font-family: "Geomanist";
+  src: url("../fonts/Geomanist.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Mulish", serif;
+}
+img {
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.header-section {
+  border-bottom: 1px solid #ddd;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: white;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 32px;
+  align-items: center;
+}
+.logo {
+}
+.logo img {
+  max-width: 99px;
+}
+.logo svg {
+  max-width: 99px;
+}
+.menu {
+  display: flex;
+  column-gap: 17px;
+  align-items: center;
+}
+.menu li {
+}
+.menu li a {
+  display: flex;
+  column-gap: 2px;
+  align-items: center;
+  color: black;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+}
+.menu li a:hover {
+  color: rgb(245, 70, 126);
+}
+.menu-btns {
+  display: flex;
+  column-gap: 26px;
+  align-items: center;
+}
+.menu-btns a {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  color: black;
+}
+.sign-in-btn {
+  background: #f5467e;
+  color: white !important;
+  padding: 6px 24px;
+  border-radius: 25px;
+}
+.sign-in-btn:hover {
+  background: #ec4378;
+}
+
+/* hero section */
+.hero-section {
+  margin-top: 100px;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  row-gap: 21px;
+  margin: 20px 2px;
+}
+.hero h3 {
+  font-size: 50px;
+  line-height: 58px;
+  color: rgb(8, 65, 92);
+  font-weight: 700;
+  font-family: "Geomanist";
+}
+.hero p {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 400;
+  color: rgb(8, 65, 92);
+  max-width: 580px;
+  margin: 0 auto;
+}
+.hero p span {
+  font-weight: 700;
+}
+.hero h4 {
+  font-size: 18px;
+  line-height: 29px;
+  font-weight: 400;
+  color: rgb(8, 65, 92);
+}
+.hero h4 span {
+  font-weight: 700;
+}
+.hero h4 a {
+  color: #f5467e;
+}
+.signature {
+  width: 415px;
+  height: 245px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+}
+.signature-features {
+  max-width: 810px;
+  margin: 0 auto;
+  display: flex;
+  column-gap: 183px;
+  align-items: center;
+}
+.feature-left {
+}
+.s-toggle {
+  display: flex;
+  column-gap: 5px;
+  align-items: center;
+}
+.s-toggle button {
+}
+/* The switch - the box around the slider */
+.s-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.s-switch .s-checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.s-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.s-slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.s-checkbox:checked + .s-slider {
+  background-color: #2196f3;
+}
+
+.s-checkbox:focus + .s-slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+.s-checkbox:checked + .s-slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.s-slider.s-round {
+  border-radius: 34px;
+}
+
+.s-slider.s-round:before {
+  border-radius: 50%;
+}
+.s-toggle .sketch {
+  font-size: 23px;
+}
+.s-toggle .keyboard {
+  font-size: 23px;
+}
+.feature-right {
+  display: flex;
+  column-gap: 4px;
+}
+.feature-right div {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  line-height: 30px;
+  text-align: center;
+}
+.feature-right div i {
+  font-size: 25px;
+}
+.feature-btns {
+  display: flex;
+  column-gap: 18px;
+  align-items: center;
+}
+
+.f-download {
+  color: #f5467e;
+  border: 2px solid #f5467e;
+  padding: 14px 36px;
+  border-radius: 4px;
+  background: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+.f-add {
+  background-color: #f5467e;
+  border: 2px solid #f5467e;
+  color: white;
+  padding: 12px 26px;
+  border-radius: 4px;
+}
