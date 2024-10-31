@@ -26,6 +26,7 @@ ul {
   position: fixed;
   left: 0;
   top: 0;
+  z-index: 999;
   width: 100%;
   background: white;
 }
@@ -83,6 +84,22 @@ ul {
   background: #ec4378;
 }
 
+.toggle-nav {
+  display: none;
+  cursor: pointer;
+}
+.toggle-nav i {
+  font-size: 23px;
+}
+@media (max-width: 1200px) {
+  .menu,
+  .menu-btns {
+    display: none;
+  }
+  .toggle-nav {
+    display: block;
+  }
+}
 /* hero section */
 .hero-section {
   margin-top: 100px;
@@ -109,6 +126,7 @@ ul {
   color: rgb(8, 65, 92);
   max-width: 580px;
   margin: 0 auto;
+  text-align: center;
 }
 .hero p span {
   font-weight: 700;
@@ -118,6 +136,7 @@ ul {
   line-height: 29px;
   font-weight: 400;
   color: rgb(8, 65, 92);
+  text-align: center;
 }
 .hero h4 span {
   font-weight: 700;
@@ -125,13 +144,31 @@ ul {
 .hero h4 a {
   color: #f5467e;
 }
-.signature {
+.signature-container {
   width: 415px;
   height: 245px;
   margin: 0 auto;
   background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+
+  border: 1px solid #ccc;
+  position: relative;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  cursor: crosshair;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+}
+canvas {
+  touch-action: none;
+}
+.clear,
+.undo {
+  cursor: pointer;
 }
 .signature-features {
   max-width: 810px;
@@ -149,6 +186,7 @@ ul {
 }
 .s-toggle button {
 }
+
 /* The switch - the box around the slider */
 .s-switch {
   position: relative;
@@ -252,4 +290,201 @@ ul {
   color: white;
   padding: 12px 26px;
   border-radius: 4px;
+}
+
+/* hero section responsive */
+@media (max-width: 768px) {
+  .hero h3 {
+    font-size: 36px;
+  }
+  .hero p {
+    font-size: 18px;
+    line-height: 29px;
+  }
+  .hero h4 {
+    font-size: 16px;
+  }
+  .f-add {
+    display: none;
+  }
+  .signature-features {
+    flex-direction: column;
+    row-gap: 12px;
+  }
+}
+@media (max-width: 520px) {
+  .signature-container {
+    width: 100%;
+  }
+  .hero h3 {
+    font-size: 20px;
+  }
+}
+
+/* signature-section */
+.signature-section {
+  padding: 0 10px;
+  margin: 100px 0 60px;
+}
+.signature-top {
+  display: flex;
+  flex-direction: column;
+  row-gap: 27px;
+}
+.signature-top h4 {
+  font-size: 38px;
+  line-height: 44px;
+  font-weight: 700;
+  color: rgb(8, 65, 92);
+  text-align: center;
+}
+.signature-top p {
+  font-size: 18px;
+  line-height: 29px;
+  font-weight: 400;
+  color: rgb(8, 65, 92);
+  text-align: center;
+  max-width: 830px;
+  margin: 0 auto;
+}
+.signature-top h5 {
+  color: rgb(8, 65, 92);
+  font-size: 28px;
+  line-height: 32px;
+  font-weight: 700;
+  text-align: center;
+}
+.signature-bottom {
+  margin-top: 37px;
+}
+.all-signature {
+  max-width: 1170px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 19px;
+}
+.single-signature {
+}
+.single-signature img {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.single-signature p {
+  font-size: 18px;
+  line-height: 29px;
+  font-weight: 400;
+  color: rgb(8, 65, 92);
+}
+
+/*  signature section responsive*/
+@media (max-width: 768px) {
+  .signature-top h4 {
+    font-size: 23px;
+    line-height: 22px;
+  }
+  .signature-top p {
+    font-size: 17px;
+    line-height: 26px;
+  }
+  .signature-top h5 {
+    font-size: 26px;
+    line-height: 29px;
+  }
+  .all-signature {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+  .single-signature img {
+    width: 100%;
+  }
+}
+
+/* video-section */
+.video-section {
+}
+.video {
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 60px;
+  padding: 60px 20px;
+}
+.video-left {
+  position: relative;
+  width: 60%;
+  border-radius: 25px;
+  overflow: hidden;
+}
+.video-left img {
+}
+.play-btn {
+  position: absolute;
+  height: 66px;
+  width: 95px;
+  left: 50%;
+  display: flex;
+  border-radius: 13px;
+  top: 50%;
+  background: #807e7e;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+}
+.play-btn:hover {
+  background-color: red;
+}
+.play-btn i {
+  font-size: 47px;
+}
+
+.video-right {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.video-right h4 {
+  font-size: 38px;
+  line-height: 44px;
+  color: rgb(8, 65, 92);
+  font-family: "Geomanist";
+  font-weight: 700;
+}
+.video-right p {
+  color: rgb(8, 65, 92);
+  font-size: 18px;
+  line-height: 29px;
+  font-weight: 400;
+}
+
+/* video section responsive */
+@media (max-width: 1000px) {
+  .video-right h4 {
+    font-size: 31px;
+    line-height: 36px;
+  }
+  .video-right p {
+    font-size: 17px;
+    line-height: 26px;
+  }
+  .video-right {
+    row-gap: 21px;
+  }
+}
+@media (max-width: 768px) {
+  .video {
+    flex-direction: column;
+    row-gap: 62px;
+  }
+  .video-left {
+    width: 100%;
+  }
+  .video-right {
+    width: 100%;
+  }
 }

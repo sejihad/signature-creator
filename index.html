@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    <!-- header section -->
     <header class="header-section">
         <nav class="nav">
             <div class="logo">
@@ -45,8 +46,12 @@
                 <a href="#" class="sign-in-btn">Sign in</a>
                 <a href="#">English</a>
             </div>
+            <div class="toggle-nav">
+                <i class="ri-align-justify"></i>
+            </div>
         </nav>
     </header>
+    <!-- hero section -->
     <section class="hero-section">
         <div class="hero">
             <h3>Free Signature Generator
@@ -55,9 +60,11 @@
                 downloadable
                 hand signature</p>
             <h4>Looking for an <span>Email</span> Signature Generator? <a href="#"> Click here.</a></h4>
-            <div class="signature">
+            <div class="signature-container">
+                <canvas id="signature-pad"></canvas>
 
             </div>
+
             <div class="signature-features">
                 <div class="feature-left">
                     <div class="s-toggle">
@@ -79,8 +86,8 @@
                     <div style="background-color: #9158BD"></div>
                     <div style="background-color: #333333"></div>
 
-                    <div><i class="ri-restart-line"></i></div>
-                    <div><i class="ri-delete-bin-6-line"></i></div>
+                    <div class="undo" onclick="undoLastStroke()"><i class="ri-restart-line"></i></div>
+                    <div class="clear" onclick="clearCanvas()"><i class="ri-delete-bin-6-line"></i></div>
                 </div>
             </div>
             <div class="feature-btns">
@@ -89,6 +96,100 @@
             </div>
         </div>
     </section>
+    <!-- signature section -->
+    <section class="signature-section">
+        <div class="signature-top">
+            <h4>What is a signature generator?​</h4>
+            <p>A signature generator, or signature maker, is an online tool that converts your handwritten signature or
+                typed signature to image format. You can then download and use your digital signature for signing
+                documents like PDF and Doc, or add it to your email signature.</p>
+            <h5>Signature inspirations
+            </h5>
+        </div>
+        <div class="signature-bottom">
+            <div class="all-signature">
+                <div class="single-signature">
+                    <img src="./assets/img/larry-page-hand-signature-1.webp" alt="">
+                    <p>Larry Page</p>
+                </div>
+                <div class="single-signature">
+                    <img src="./assets/img/Isaac-Newton-signature.webp" alt="">
+                    <p>Isaac Newton</p>
+                </div>
+                <div class="single-signature">
+                    <img src="./assets/img/Donald-Trump-Signature.webp" alt="">
+                    <p>Donald Trump</p>
+                </div>
+                <div class="single-signature">
+                    <img src="./assets/img/Marie-Curie-signature.webp" alt="">
+                    <p>Marie Curie</p>
+                </div>
+                <div class="single-signature">
+                    <img src="./assets/img/Serena-Williams-handwritten-signature.webp" alt="">
+                    <p>Serena Williams</p>
+                </div>
+                <div class="single-signature">
+                    <img src="./assets/img/Michael-Jordan-personal-autograph.webp" alt="">
+                    <p>Michael Jordan</p>
+                </div>
+                <div class="single-signature">
+                    <img src="./assets/img/Oprah-Winfrey-Signature-1.webp" alt="">
+                    <p>Oprah Winfrey Signature</p>
+                </div>
+                <div class="single-signature">
+                    <img src="./assets/img/Angela-Merkel-Signature-1.webp" alt="">
+                    <p>Angela Merkel</p>
+                </div>
+                <div class="single-signature">
+                    <img src="./assets/img/Cristiano-Ronaldo-hand-Signature-1.webp" alt="">
+                    <p>Cristiano Ronaldo </p>
+                </div>
+                <div class="single-signature">
+                    <img src="./assets/img/Steve-jobs-hand-signature-1-1.webp" alt="">
+                    <p>Steve Jobs </p>
+                </div>
+                <div class="single-signature">
+                    <img src="./assets/img/signature-of-Barack-Obama-1.webp" alt="">
+                    <p>Barack Obama </p>
+                </div>
+                <div class="single-signature">
+                    <img src="./assets/img/Warren-Buffett-hand-Signature-1.webp" alt="">
+                    <p>Warren Buffett </p>
+                </div>
+                <div class="single-signature">
+                    <img src="./assets/img/Bill-Clinton-hand-signature-1.webp" alt="">
+                    <p>Bill Clinton </p>
+                </div>
+                <div class="single-signature">
+                    <img src="./assets/img/Thomas-Jefferson-autograph.svg.webp" alt="">
+                    <p>Thomas Jefferson</p>
+                </div>
+                <div class="single-signature">
+                    <img src="./assets/img/JK-Rowling-signature.webp" alt="">
+                    <p>JK Rowling</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- video section -->
+    <section class="video-section">
+        <div class="video">
+            <div class="video-left">
+                <img src="./assets/img/add-handwritten-sign-off-to-email-2.jpeg" alt="">
+                <div class="play-btn">
+                    <i class="ri-play-fill"></i>
+                </div>
+            </div>
+            <div class="video-right">
+                <h4>Add a handwritten or typed signature to your email with our online signature maker
+                </h4>
+                <p>Looks great in Gmail, Outlook, MacMail, Yahoo, and more</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- js -->
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
