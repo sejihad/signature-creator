@@ -13,3 +13,6 @@ This is a simple web application that allows users to draw their signature on a 
 - **HTML**: Structure and content of the webpage.
 - **CSS**: Styling for the signature canvas and buttons.
 - **JavaScript**: Handle the signature drawing logic, clearing the canvas, and downloading the image.
+
+## Screenshots
+![Facebook Login Page Clone](assets/img/homepage.png)
